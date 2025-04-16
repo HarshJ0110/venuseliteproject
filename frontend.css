@@ -37,7 +37,7 @@ a {
 }
 
 
-.logo p {
+.logo div {
     color: var(--primary-color);
 }
 
