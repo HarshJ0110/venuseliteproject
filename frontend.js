@@ -27,21 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             
-            // const targetElement = document.querySelector(targetId);
-            // if (targetElement) {
-            //     window.scrollTo({
-            //         top: targetElement.offsetTop - 80,
-            //         behavior: 'smooth'
-            //     });
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
                 
-            //     // Close mobile menu if open
-            //     if (navLinks.classList.contains('active')) {
-            //         navLinks.classList.remove('active');
-            //         const icon = mobileMenuBtn.querySelector('i');
-            //         icon.classList.remove('fa-times');
-            //         icon.classList.add('fa-bars');
-            //     }
-            // }
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
     });
     
@@ -196,11 +196,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) {
-                item.classList.add('active');
-            }
-        });
+        // navItems.forEach(item => {
+        //     item.classList.remove('active');
+        //     if (item.getAttribute('href') === `#${current}`) {
+        //         item.classList.add('active');
+        //     }
+        // });
     });
 });
